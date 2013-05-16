@@ -1,0 +1,9 @@
+[user]
+	name = Jaden Carver
+	email = jaden.carver@gmail.com
+[mergetool]
+	keepBackup = false
+[push]
+	default = simple
+[core]
+	excludesfile = /Users/jaden/.gitignore_global
