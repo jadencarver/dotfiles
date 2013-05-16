@@ -17,6 +17,7 @@ Bundle 'othree/html5.vim'
 set tabstop=2
 set shiftwidth=2
 set expandtab
+set mouse=a
 
 colors distinguished
 
