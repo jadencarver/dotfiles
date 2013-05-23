@@ -10,9 +10,10 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-rails'
-Bundle 'wincent/Command-T'
+Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'othree/html5.vim'
+Bundle 'mileszs/ack.vim'
 
 set tabstop=2
 set shiftwidth=2
