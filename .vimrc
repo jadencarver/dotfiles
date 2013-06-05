@@ -28,3 +28,7 @@ command W w !sudo tee % > /dev/null
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 map <C-n> :NERDTreeToggle<CR>
+
+noremap <silent> <C-d> :split<CR>
+vnoremap <silent> <C-d> :split<CR>
+inoremap <silent> <C-d> :split<CR>
