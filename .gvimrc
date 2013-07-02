@@ -1,1 +1,1 @@
-set transparency=30
+set transparency=10
