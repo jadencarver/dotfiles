@@ -14,13 +14,17 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'othree/html5.vim'
 Bundle 'mileszs/ack.vim'
+Bundle 'ervandew/supertab'
 
 set tabstop=2
 set shiftwidth=2
 set expandtab
 set mouse=a
-set cindent
 set number
+set nocompatible
+set smartindent
+set autoindent
+filetype indent on
 
 colors distinguished
 
