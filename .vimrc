@@ -1,7 +1,6 @@
 set t_Co=256
 set nocompatible
 filetype off
-syntax on
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -15,6 +14,10 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'othree/html5.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'ervandew/supertab'
+Bundle 'kchmck/vim-coffee-script'
+
+syntax enable
+filetype plugin indent on
 
 set tabstop=2
 set shiftwidth=2
@@ -24,9 +27,11 @@ set number
 set nocompatible
 set smartindent
 set autoindent
-filetype indent on
+set backspace=indent,eol,start
 
 colors distinguished
+
+let &colorcolumn=join(range(81,999),",")
 
 command W w !sudo tee % > /dev/null
 
