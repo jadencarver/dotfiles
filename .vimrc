@@ -1,7 +1,6 @@
 set t_Co=256
 set nocompatible
 filetype off
-syntax on
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -17,6 +16,9 @@ Bundle 'mileszs/ack.vim'
 Bundle 'ervandew/supertab'
 Bundle 'kchmck/vim-coffee-script'
 
+syntax enable
+filetype plugin indent on
+
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -25,7 +27,6 @@ set number
 set nocompatible
 set smartindent
 set autoindent
-filetype indent on
 
 colors distinguished
 
@@ -35,6 +36,8 @@ command W w !sudo tee % > /dev/null
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 map <C-n> :NERDTreeToggle<CR>
+
+set backspace=indent,eol,start
 
 noremap <silent> <C-d> :split<CR>
 vnoremap <silent> <C-d> :split<CR>
