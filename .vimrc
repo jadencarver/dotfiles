@@ -15,6 +15,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'othree/html5.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'ervandew/supertab'
+Bundle 'kchmck/vim-coffee-script'
 
 set tabstop=2
 set shiftwidth=2
@@ -27,6 +28,8 @@ set autoindent
 filetype indent on
 
 colors distinguished
+
+let &colorcolumn=join(range(81,999),",")
 
 command W w !sudo tee % > /dev/null
 
