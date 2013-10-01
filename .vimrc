@@ -29,6 +29,7 @@ set number
 set nocompatible
 set smartindent
 set autoindent
+set backspace=indent,eol,start
 
 colors distinguished
 
