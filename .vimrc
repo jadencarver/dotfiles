@@ -15,6 +15,8 @@ Bundle 'othree/html5.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'ervandew/supertab'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'janx/vim-rubytest'
+Bundle 'tpope/vim-rvm'
 
 syntax enable
 filetype plugin indent on
@@ -42,3 +44,13 @@ set backspace=indent,eol,start
 noremap <silent> <C-d> :split<CR>
 vnoremap <silent> <C-d> :split<CR>
 inoremap <silent> <C-d> :split<CR>
+
+let mapleader = ","
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+let g:rubytest_in_quickfix = 1
+let g:rubytest_cmd_spec = "rspec %p"
+let g:rubytest_cmd_example = "rspec %p -e '%c'"
