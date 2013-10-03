@@ -15,8 +15,6 @@ Bundle 'othree/html5.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'ervandew/supertab'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'janx/vim-rubytest'
-Bundle 'tpope/vim-rvm'
 
 syntax enable
 filetype plugin indent on
