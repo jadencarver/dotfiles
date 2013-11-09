@@ -31,7 +31,7 @@ set backspace=indent,eol,start
 
 colors distinguished
 
-let &colorcolumn=join(range(81,999),",")
+let &colorcolumn=join(range(101,999),",")
 
 command W w !sudo tee % > /dev/null
 
