@@ -1,1 +1,3 @@
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+git clone https://github.com/Lokaltog/powerline-fonts.git ~/.vim/fonts && cp -r ~/.vim/fonts/* /Library/Fonts/
+
