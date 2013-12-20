@@ -32,7 +32,7 @@ set backspace=indent,eol,start
 set guioptions-=L
 set guifont=Meslo\ LG\ M\ DZ\ for\ Powerline:h12
 
-colors marklar
+colors distinguished
 highlight ColorColumn ctermbg=232
 
 let &colorcolumn=join(range(101,999),",")
