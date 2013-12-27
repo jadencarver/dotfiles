@@ -16,6 +16,7 @@ Bundle 'mileszs/ack.vim'
 Bundle 'ervandew/supertab'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'bling/vim-airline'
+Bundle 'slim-template/vim-slim'
 
 syntax enable
 filetype plugin indent on
@@ -32,14 +33,14 @@ set backspace=indent,eol,start
 set guioptions-=L
 set guifont=Meslo\ LG\ M\ DZ\ for\ Powerline:h12
 
-colors marklar
+colors distinguished
 highlight ColorColumn ctermbg=232
 
 let &colorcolumn=join(range(101,999),",")
 let g:airline_powerline_fonts = 1
 let g:airline_section_warning = strftime("%H:%M")
 
-command W w !sudo tee % > /dev/null
+command S w !sudo tee % > /dev/null
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 map <C-n> :NERDTreeToggle<CR>
