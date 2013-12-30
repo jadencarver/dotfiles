@@ -16,6 +16,7 @@ Bundle 'mileszs/ack.vim'
 Bundle 'ervandew/supertab'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'bling/vim-airline'
+Bundle 'rking/ag.vim'
 
 syntax enable
 filetype plugin indent on
