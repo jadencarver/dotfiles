@@ -12,11 +12,11 @@ Bundle 'tpope/vim-rails'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'othree/html5.vim'
-Bundle 'mileszs/ack.vim'
 Bundle 'ervandew/supertab'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'bling/vim-airline'
 Bundle 'slim-template/vim-slim'
+Bundle 'rking/ag.vim'
 
 syntax enable
 filetype plugin indent on
