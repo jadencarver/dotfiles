@@ -32,6 +32,7 @@ set autoindent
 set backspace=indent,eol,start
 set guioptions-=L
 set guifont=Meslo\ LG\ M\ DZ\ for\ Powerline:h12
+setlocal spell spelllang=en_us
 
 colors distinguished
 highlight ColorColumn ctermbg=232
