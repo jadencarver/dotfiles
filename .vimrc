@@ -44,6 +44,7 @@ let g:airline_section_warning = strftime("%H:%M")
 command S w !sudo tee % > /dev/null
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
 map <C-n> :NERDTreeToggle<CR>
 
 noremap <silent> <C-d> :split<CR>
