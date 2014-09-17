@@ -17,6 +17,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'bling/vim-airline'
 Bundle 'slim-template/vim-slim'
 Bundle 'rking/ag.vim'
+Bundle 'lilydjwg/colorizer'
 
 syntax enable
 filetype plugin indent on
