@@ -34,6 +34,8 @@ set guioptions-=L
 set guifont=Meslo\ LG\ M\ DZ\ for\ Powerline:h12
 setlocal spell spelllang=en_us
 
+autocmd FileType eruby setlocal noexpandtab
+
 colors distinguished
 highlight ColorColumn ctermbg=232
 
@@ -50,12 +52,17 @@ map <C-n> :NERDTreeToggle<CR>
 noremap <silent> <C-d> :split<CR>
 vnoremap <silent> <C-d> :split<CR>
 inoremap <silent> <C-d> :split<CR>
+noremap <silent> <C-D> :vsplit<CR>
+vnoremap <silent> <C-D> :vsplit<CR>
+inoremap <silent> <C-D> :vsplit<CR>
 
 let mapleader = ","
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+autocmd FileType html setlocal noexpandtab
 
 let g:rubytest_in_quickfix = 1
 let g:rubytest_cmd_spec = "rspec %p"
