@@ -18,6 +18,8 @@ Bundle 'bling/vim-airline'
 Bundle 'slim-template/vim-slim'
 Bundle 'rking/ag.vim'
 Bundle 'lilydjwg/colorizer'
+Bundle 'rorymckinley/vim-rubyhash'
+Bundle 'msanders/snipmate.vim'
 
 syntax enable
 filetype plugin indent on
@@ -36,6 +38,7 @@ set guifont=Meslo\ LG\ M\ DZ\ for\ Powerline:h12
 setlocal spell spelllang=en_us
 
 autocmd FileType eruby setlocal noexpandtab
+autocmd BufNewFile,BufRead *.md set filetype=markdown
 
 colors distinguished
 highlight ColorColumn ctermbg=232
