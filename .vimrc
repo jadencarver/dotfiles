@@ -5,21 +5,22 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-rails'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'othree/html5.vim'
-Bundle 'ervandew/supertab'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'bling/vim-airline'
-Bundle 'slim-template/vim-slim'
-Bundle 'rking/ag.vim'
-Bundle 'lilydjwg/colorizer'
-Bundle 'rorymckinley/vim-rubyhash'
-Bundle 'msanders/snipmate.vim'
+Plugin 'gmarik/vundle'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-rails'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'othree/html5.vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'bling/vim-airline'
+Plugin 'slim-template/vim-slim'
+Plugin 'rking/ag.vim'
+Plugin 'lilydjwg/colorizer'
+Plugin 'vim-scripts/vim-rooter'
+Plugin 'scrooloose/syntastic'
+Plugin 'isRuslan/vim-es6'
+Plugin 'rust-lang/rust.vim'
 
 syntax enable
 filetype plugin indent on
