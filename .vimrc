@@ -38,9 +38,6 @@ set guioptions-=L
 set guifont=Meslo\ LG\ M\ DZ\ for\ Powerline:h12
 setlocal spell spelllang=en_us
 
-autocmd FileType eruby setlocal noexpandtab
-autocmd BufNewFile,BufRead *.md set filetype=markdown
-
 colors distinguished
 highlight ColorColumn ctermbg=232
 
@@ -51,7 +48,6 @@ let g:airline_section_warning = strftime("%H:%M")
 command S w !sudo tee % > /dev/null
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-autocmd FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
 map <C-n> :NERDTreeToggle<CR>
 
 noremap <silent> <C-d> :split<CR>
@@ -68,7 +64,7 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 autocmd FileType html setlocal noexpandtab
-
-let g:rubytest_in_quickfix = 1
-let g:rubytest_cmd_spec = "rspec %p"
-let g:rubytest_cmd_example = "rspec %p -e '%c'"
+autocmd Filetype js setlocal shiftwidth=4
+autocmd FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
+autocmd FileType eruby setlocal noexpandtab
+autocmd BufNewFile,BufRead *.md set filetype=markdown
