@@ -21,6 +21,8 @@ Plugin 'vim-scripts/vim-rooter'
 Plugin 'scrooloose/syntastic'
 Plugin 'isRuslan/vim-es6'
 Plugin 'rust-lang/rust.vim'
+Plugin 'racer-rust/vim-racer'
+" Plugin '907th/vim-auto-save'
 
 syntax enable
 filetype plugin indent on
@@ -67,4 +69,5 @@ autocmd FileType html setlocal noexpandtab
 autocmd Filetype js setlocal shiftwidth=4
 autocmd FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
 autocmd FileType eruby setlocal noexpandtab
+autocmd FileType rust setlocal expandtab shiftwidth=4
 autocmd BufNewFile,BufRead *.md set filetype=markdown
