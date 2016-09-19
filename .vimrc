@@ -5,25 +5,6 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Plugin 'gmarik/vundle'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-haml'
-Plugin 'tpope/vim-rails'
-Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'othree/html5.vim'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'bling/vim-airline'
-Plugin 'slim-template/vim-slim'
-Plugin 'rking/ag.vim'
-Plugin 'lilydjwg/colorizer'
-Plugin 'vim-scripts/vim-rooter'
-Plugin 'scrooloose/syntastic'
-Plugin 'isRuslan/vim-es6'
-Plugin 'rust-lang/rust.vim'
-Plugin 'racer-rust/vim-racer'
-" Plugin '907th/vim-auto-save'
-
 syntax enable
 filetype plugin indent on
 
@@ -42,32 +23,48 @@ setlocal spell spelllang=en_us
 
 colors distinguished
 highlight ColorColumn ctermbg=232
-
 let &colorcolumn=join(range(101,999),",")
-let g:airline_powerline_fonts = 1
-let g:airline_section_warning = strftime("%H:%M")
 
-command S w !sudo tee % > /dev/null
-
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-map <C-n> :NERDTreeToggle<CR>
-
+inoremap <S-Space> _
 noremap <silent> <C-d> :split<CR>
 vnoremap <silent> <C-d> :split<CR>
 inoremap <silent> <C-d> :split<CR>
 noremap <silent> <C-D> :vsplit<CR>
 vnoremap <silent> <C-D> :vsplit<CR>
 inoremap <silent> <C-D> :vsplit<CR>
+command S w !sudo tee % > /dev/null
 
-let mapleader = ","
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
-
-autocmd FileType html setlocal noexpandtab
-autocmd Filetype js setlocal shiftwidth=4
-autocmd FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
+autocmd Filetype js setlocal expandtab shiftwidth=4
+autocmd Filetype html setlocal expandtab shiftwidth=4
+"autocmd FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
 autocmd FileType eruby setlocal noexpandtab
 autocmd FileType rust setlocal expandtab shiftwidth=4
 autocmd BufNewFile,BufRead *.md set filetype=markdown
+
+Plugin 'gmarik/vundle'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-rails'
+Plugin 'ctrlpvim/ctrlp.vim'
+let g:ctrlp_max_depth = 40
+let g:ctrlp_max_files = 0
+
+Plugin 'scrooloose/nerdtree'
+map <C-n> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+Plugin 'othree/html5.vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'bling/vim-airline'
+let g:airline_powerline_fonts = 1
+let g:airline_section_warning = strftime("%H:%M")
+
+Plugin 'slim-template/vim-slim'
+Plugin 'rking/ag.vim'
+Plugin 'lilydjwg/colorizer'
+Plugin 'vim-scripts/vim-rooter'
+Plugin 'scrooloose/syntastic'
+Plugin 'isRuslan/vim-es6'
+Plugin 'rust-lang/rust.vim'
+Plugin 'racer-rust/vim-racer'
+" Plugin '907th/vim-auto-save'
