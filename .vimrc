@@ -34,12 +34,14 @@ vnoremap <silent> <C-D> :vsplit<CR>
 inoremap <silent> <C-D> :vsplit<CR>
 command S w !sudo tee % > /dev/null
 
-autocmd Filetype js setlocal expandtab shiftwidth=4
+autocmd Filetype js setlocal expandtab shiftwidth=4 filetype=javascript
+autocmd Filetype es6 setlocal expandtab shiftwidth=4 filetype=javascript
 autocmd Filetype html setlocal expandtab shiftwidth=4
 "autocmd FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
 autocmd FileType eruby setlocal noexpandtab
 autocmd FileType rust setlocal expandtab shiftwidth=4
 autocmd BufNewFile,BufRead *.md set filetype=markdown
+autocmd BufNewFile,BufRead *.rs set filetype=rust
 
 Plugin 'gmarik/vundle'
 Plugin 'tpope/vim-fugitive'
@@ -65,6 +67,7 @@ Plugin 'lilydjwg/colorizer'
 Plugin 'vim-scripts/vim-rooter'
 Plugin 'scrooloose/syntastic'
 Plugin 'isRuslan/vim-es6'
+
 Plugin 'rust-lang/rust.vim'
 Plugin 'racer-rust/vim-racer'
 " Plugin '907th/vim-auto-save'
