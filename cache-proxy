@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+require 'billy'
+
+Billy.configure do |c|
+    c.cache = true
+    c.cache_path = File.expand_path('../cache', __FILE__)
+    c.proxy_port = 12345
+end
+
+puts Billy.config.cache_path
+
+Billy::Proxy.new.start(false)
