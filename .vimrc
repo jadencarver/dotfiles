@@ -32,16 +32,20 @@ inoremap <silent> <C-d> :split<CR>
 noremap <silent> <C-D> :vsplit<CR>
 vnoremap <silent> <C-D> :vsplit<CR>
 inoremap <silent> <C-D> :vsplit<CR>
+nnoremap <silent><Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent><Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
+nnoremap <silent><Leader>> :exe "vertical resize " . (winwidth(0) * 3/2)<CR>
+nnoremap <silent><Leader>< :exe "vertical resize " . (winwidth(0) * 2/3)<CR>
 command S w !sudo tee % > /dev/null
 
-autocmd Filetype js setlocal expandtab shiftwidth=4 filetype=javascript
-autocmd Filetype es6 setlocal expandtab shiftwidth=4 filetype=javascript
-autocmd Filetype html setlocal expandtab shiftwidth=4
+autocmd Filetype html setlocal expandtab shiftwidth=2
+autocmd Filetype javascript setlocal expandtab shiftwidth=2
 "autocmd FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
 autocmd FileType eruby setlocal noexpandtab
 autocmd FileType rust setlocal expandtab shiftwidth=4
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 autocmd BufNewFile,BufRead *.rs set filetype=rust
+autocmd BufNewFile,BufRead *.es6 set filetype=javascript
 
 Plugin 'gmarik/vundle'
 Plugin 'tpope/vim-fugitive'
@@ -71,3 +75,4 @@ Plugin 'isRuslan/vim-es6'
 Plugin 'rust-lang/rust.vim'
 Plugin 'racer-rust/vim-racer'
 " Plugin '907th/vim-auto-save'
+Plugin 'mikelue/vim-maven-plugin'

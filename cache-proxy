@@ -1,10 +1,15 @@
 #!/usr/bin/env ruby
 require 'billy'
+require 'uri'
+
+proxy = URI(ENV['http_proxy'])
 
 Billy.configure do |c|
     c.cache = true
     c.cache_path = File.expand_path('../cache', __FILE__)
     c.proxy_port = 12345
+    c.proxied_request_host = proxy.host
+    c.proxied_request_port = proxy.port
 end
 
 puts Billy.config.cache_path

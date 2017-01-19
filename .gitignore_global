@@ -1,2 +1,8 @@
 .DS_Store
 *.swp
+*.swo
+.agignore
+.jshintrc
+/config/initializers/*.local.rb
+/config/active_bas/development.yml
+/vendor/bundle
