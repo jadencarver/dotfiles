@@ -38,14 +38,16 @@ nnoremap <silent><Leader>> :exe "vertical resize " . (winwidth(0) * 3/2)<CR>
 nnoremap <silent><Leader>< :exe "vertical resize " . (winwidth(0) * 2/3)<CR>
 command S w !sudo tee % > /dev/null
 
-autocmd Filetype html setlocal expandtab shiftwidth=2
-autocmd Filetype javascript setlocal expandtab shiftwidth=2
+autocmd Filetype html setlocal expandtab shiftwidth=4
+autocmd Filetype javascript setlocal expandtab shiftwidth=4
 "autocmd FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
 autocmd FileType eruby setlocal noexpandtab
 autocmd FileType rust setlocal expandtab shiftwidth=4
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 autocmd BufNewFile,BufRead *.rs set filetype=rust
 autocmd BufNewFile,BufRead *.es6 set filetype=javascript
+autocmd BufNewFile,BufRead *.slim set filetype=slim
+autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 
 Plugin 'gmarik/vundle'
 Plugin 'tpope/vim-fugitive'
@@ -76,3 +78,4 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'racer-rust/vim-racer'
 " Plugin '907th/vim-auto-save'
 Plugin 'mikelue/vim-maven-plugin'
+Plugin 'majutsushi/tagbar'
