@@ -40,12 +40,14 @@ command S w !sudo tee % > /dev/null
 
 autocmd Filetype html setlocal expandtab shiftwidth=4
 autocmd Filetype javascript setlocal expandtab shiftwidth=4
+autocmd Filetype json %!python -m json.tool
 "autocmd FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
 autocmd FileType eruby setlocal noexpandtab
 autocmd FileType rust setlocal expandtab shiftwidth=4
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 autocmd BufNewFile,BufRead *.rs set filetype=rust
 autocmd BufNewFile,BufRead *.es6 set filetype=javascript
+autocmd BufNewFile,BufRead *.ts set filetype=typescript
 autocmd BufNewFile,BufRead *.slim set filetype=slim
 autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 
@@ -54,6 +56,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-rails'
 Plugin 'ctrlpvim/ctrlp.vim'
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe,doc\\*.html
 let g:ctrlp_max_depth = 40
 let g:ctrlp_max_files = 0
 
@@ -71,10 +74,11 @@ Plugin 'slim-template/vim-slim'
 Plugin 'rking/ag.vim'
 Plugin 'lilydjwg/colorizer'
 Plugin 'vim-scripts/vim-rooter'
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 Plugin 'isRuslan/vim-es6'
 
 Plugin 'rust-lang/rust.vim'
+Plugin 'leafgarland/typescript-vim'
 Plugin 'racer-rust/vim-racer'
 " Plugin '907th/vim-auto-save'
 Plugin 'mikelue/vim-maven-plugin'
